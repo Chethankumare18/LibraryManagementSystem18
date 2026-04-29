@@ -32,3 +32,12 @@ app.listen(PORT, () => {
     console.log(`\n🟢 SmartLib Backend running on http://localhost:${PORT}`);
     console.log(`   Database: MongoDB via Mongoose`);
 });
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/books', require('./routes/books'));
+app.use('/api/issues', require('./routes/issues'));
+app.use('/api/requests', require('./routes/requests'));
+app.use('/api/feedback', require('./routes/feedback'));
+app.use('/api/settings', require('./routes/settings'));
+app.use('/api/stats', require('./routes/stats'));
+app.use('/api/notifications', require('./routes/notifications'));
